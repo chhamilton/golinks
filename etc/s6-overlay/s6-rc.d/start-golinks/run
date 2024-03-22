@@ -1,0 +1,7 @@
+#!/usr/bin/with-contenv bash
+
+# Make sure the data directory has the right ownership.
+chown abc:abc /data
+
+echo "[start-golinks] Starting golinks as user abc..."
+su abc -s /bin/bash -c /etc/s6-overlay/s6-rc.d/start-golinks/golinks.sh
